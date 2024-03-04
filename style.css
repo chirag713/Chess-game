@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(77,112,65);
+    /* margin-top: 5vmin; */
+    padding-top: 5vmin;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+}
+
+.Squarerow{
+    display: flex;
+}
+.white{
+    background-color:rgb(197,165,111);
+}
+
+.black{
+    background-color:rgb(121,85,50)
+}
+.square{
+    width: 11vmin;
+    height: 11vmin;
+}
+
+.piece{
+    width: 100%;
+    cursor: grab;
+}
+
+.highlight-yellow{
+    background-color: rgb(203,162,81);
+}
+
+.circle{
+    background-color:rgba(0, 0, 0, 0.15);
+    display: block;
+    width: 6vmin;
+    height: 6vmin;
+    margin: auto;
+    margin-top: 2vmin;
+    border-radius: 50%;
+}
