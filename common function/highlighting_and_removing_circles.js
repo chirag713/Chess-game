@@ -7,7 +7,7 @@ function removecircle() {
         // Check if the first child element is a span
         if (element.firstElementChild && element.firstElementChild.nodeName === "SPAN") {
             element.innerHTML="";
-        } 
+        }
     });
 }
 

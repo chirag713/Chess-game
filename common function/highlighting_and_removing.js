@@ -16,8 +16,9 @@ function highlightyellow(currentpos){
         return;
     }
     removeyellow();
+    removecircle();
     yellow_highlight=currentpos;
     document.getElementById(currentpos).classList.add("highlight-yellow");
 }
 
-export{highlightyellow}
+export{highlightyellow , removeyellow , yellow_highlight}

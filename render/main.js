@@ -97,7 +97,12 @@ function initgamerender(data) {
                 square.piece = piece.whiteking(square.id);
             }
 
-
+            if(square.id=="e5" || square.id=="b5"){
+                square.piece = piece.blackknight(square.id);
+            }
+            if(square.id=="a4" || square.id=="d4"){
+                square.piece = piece.whiteknight(square.id);
+            }
             rowEl.appendChild(squarediv);
         });
 
@@ -107,6 +112,4 @@ function initgamerender(data) {
 
     piecerender(data);
 }
-
-
 export { initgamerender };

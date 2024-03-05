@@ -13,6 +13,11 @@ import {blackqueenclick} from "./queen.js"
 import {whiteknightclick} from "./knight.js"
 import {blackknightclick} from "./knight.js"
 
+import { removecircle } from "../../common function/highlighting_and_removing_circles.js";
+import { removeyellow } from "../../common function/highlighting_and_removing.js";
+import { movepiece } from "../../common function/piecetomove.js";
+import { yellow_highlight } from "../../common function/highlighting_and_removing.js";
+
 
 function piece_move(){
     document.getElementById("root").addEventListener("click" , function(event){
@@ -55,6 +60,25 @@ function piece_move(){
             }
             else if (square.piece.piece_name === "Black_knight") {
                 blackknightclick(square);
+            }
+        }
+        else{
+            const childelementsofclickedel = Array.from(event.target.childNodes);
+            if (childelementsofclickedel.length == 1 || event.target.localName == "span") {
+                if (event.target.localName == "span") {
+                    const id = event.target.parentNode.id;
+                    let moveid=yellow_highlight;
+                    movepiece(moveid, id);
+                }
+                else {
+                    let moveid=yellow_highlight;
+                    const id = event.target.id;
+                    movepiece(moveid, id);
+                }
+            }
+            else{
+                removecircle();
+                removeyellow();
             }
         }
     })
