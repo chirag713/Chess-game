@@ -13,7 +13,7 @@ function removecircle() {
 
 function highlightcircle(arr) {
     removecircle();
-
+    
     arr.forEach(element => {
         const highlightSpan = document.createElement("span");
         highlightSpan.classList.add("circle");

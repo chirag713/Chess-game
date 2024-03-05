@@ -1,9 +1,7 @@
 import { highlightyellow } from "../../common function/highlighting_and_removing.js";
 import { highlightcircle } from "../../common function/highlighting_and_removing_circles.js";
-// import { globalstate } from "../../app.js";
 
 function whitepawnclick({ piece }) {
-    // let flatarr = globalstate.flat();
     console.log("white pawn");
     let whitepawn = document.getElementById(piece.current_position);
     let currentpos = piece.current_position;
@@ -39,7 +37,6 @@ function whitepawnclick({ piece }) {
         if (whitepawn.classList.contains("highlight-yellow"))
             highlightcircle(tomovepos);
     }
-
 }
 
 function blackpawnclick({ piece }) {
@@ -52,6 +49,7 @@ function blackpawnclick({ piece }) {
         let x = currentpos[0] + '6';
         let y = currentpos[0] + '5';
         if (document.getElementById(x).innerHTML) {
+            
         }
         else {
             tomovepos.push(x);

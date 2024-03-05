@@ -1,6 +1,5 @@
 body{
     background-color: rgb(77,112,65);
-    /* margin-top: 5vmin; */
     padding-top: 5vmin;
 }
 
@@ -9,6 +8,11 @@ body{
     flex-direction: column;
     width: fit-content;
     margin: auto;
+}
+
+.piece{
+    width: 100%;
+    cursor: grab;
 }
 
 .Squarerow{
@@ -43,4 +47,12 @@ body{
     margin: auto;
     margin-top: 2vmin;
     border-radius: 50%;
+}
+
+.capture-color{
+    background-color: red;
+}
+
+.check-color{
+    background-color: green;
 }

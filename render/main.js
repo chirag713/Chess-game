@@ -13,7 +13,6 @@ function piecerender(data) {
                 const squareEl = document.getElementById(square.id);
 
                 // create piece
-
                 const piece = document.createElement("img");
 
                 piece.src = square.piece.img;
@@ -98,10 +97,10 @@ function initgamerender(data) {
             }
 
             if(square.id=="e5" || square.id=="b5"){
-                square.piece = piece.blackknight(square.id);
+                square.piece = piece.blackrook(square.id);
             }
             if(square.id=="a4" || square.id=="d4"){
-                square.piece = piece.whiteknight(square.id);
+                square.piece = piece.whiterook(square.id);
             }
             rowEl.appendChild(squarediv);
         });
