@@ -67,6 +67,7 @@ function whiterookclick({ piece }) {
 }
 
 function blackrookclick({ piece }) {
+    
     console.log("black rook");
     let currentpos = piece.current_position;
     highlightyellow(currentpos);
